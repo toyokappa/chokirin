@@ -1,6 +1,6 @@
 <template lang="pug">
-header.navbar.navbar-expand-lg.header-nav(
-  :class="{ 'fixed-top': $store.state.isFixed }"
+header.navbar.navbar-expand-lg.header-nav.fixed-top(
+  :class="{ 'no-icon': $store.state.isFixed }"
 )
   nav.container
     .toggle-button
@@ -125,7 +125,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.header-nav.fixed-top
+.header-nav.no-icon
   height: 50px
   div.icon
     display: none
