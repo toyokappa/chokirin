@@ -1,33 +1,45 @@
 <template lang="pug">
 .about
+  .container
+    .row
+      .col-lg-6.order-lg-2.mb-sx-3
+        img(v-lazy="cutSample")
+      .col-lg-6.order-lg-1
+        section
+          p chokirinはクセ毛・ダメージ・パサつきのお悩み解決を得意とした美容室です。
+        section
+          p くせ毛が得意ってどうゆう事？？
+        section
+          p 実は、クセがないストレートの髪とクセ毛の髪はカットの仕方や考え方が違うんです。クセ毛をストレートと同じ考え方でカットすると、まとまらなかったり、広がったりする可能性が高まります。
+        section
+          p くせ毛は何より【経験】が大切と考えています。
+          p これまで数多くのくせ毛のお客様を担当しているので、もしクセ毛でお悩みであれば是非一度ご相談下さい
   .content
-    section
-      p かくれんぼ in ぐんまとは、読んで字の如く「かくれんぼ」を「群馬」でやろうという企画です。
-    section
-      p 誰しもが子供の頃に一度はかくれんぼで遊んだことがあると思います。
-      p このかくれんぼが大人になった今でも楽しめるのだろうか？
-      p そんな純粋な疑問からこの企画が立ち上がりました。
-    section
-      p 2020年8月、この疑問を解消すべく7名の大人たちが集まり実験が行われました。
-      p 実験当日のギリギリまで「本当に楽しいのだろうか？」と疑心暗鬼でしたが、
-      p いざやってみると、童心に帰ったような感覚で楽しむことができました。
-    section
-      p こんなに楽しいのであれば、県内に広めないことにはもったいないと考えています。
-      p 最終的には群馬を「かくれんぼ県」と言わしめることが私達の野望です。
-      p その第一歩として情報を発信すべくこのサイトを立ち上げました。
 </template>
+
+<script>
+import cutSample from "@/assets/images/cut-sample.jpg";
+
+export default {
+  data() {
+    return {
+      cutSample,
+    };
+  },
+};
+</script>
 
 <style lang="sass" scoped>
 .about
-  text-align: center
-  .content
-    font-size: 14px
-    letter-spacing: 2px
-    line-height: 1.7
-    section
-      margin-bottom: 30px
-      p
-        margin-bottom: 5px
+  font-size: 16px
+  letter-spacing: 2px
+  line-height: 1.7
+  img
+    width: 100%
+  section
+    margin-bottom: 30px
+    p
+      margin-bottom: 5px
 @media screen and (max-width: 480px)
   .about
     .content

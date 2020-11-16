@@ -5,11 +5,13 @@
   section.section
     s-pagetop
   section.section
-    p-section-header#about(
+    s-first-message
+  section.section
+    p-section-header#concept(
       :logo="aboutLogo",
-      title="かくれんぼ in ぐんま",
-      subtitle="What Kakurenbo in Gunma?",
-      description="私達の成り立ちと想い"
+      title="美容室chokirin",
+      subtitle="What's Chokirin?",
+      description="美容室の特徴"
     )
     s-about
   section.section
@@ -74,6 +76,7 @@ import PEventButton from "@/components/parts/EventButton";
 import PSectionHeader from "@/components/parts/SectionHeader";
 import PBlogLinkButton from "@/components/parts/BlogLinkButton";
 import SPagetop from "@/components/sections/Pagetop";
+import SFirstMessage from "@/components/sections/FirstMessage";
 import SAbout from "@/components/sections/About";
 import SConcept from "@/components/sections/Concept";
 import SGallery from "@/components/sections/Gallery";
@@ -83,7 +86,7 @@ import SBlog from "@/components/sections/Blog";
 import SEvent from "@/components/sections/Event";
 import SContact from "@/components/sections/Contact";
 
-import aboutLogo from "@/assets/images/about.svg";
+import aboutLogo from "@/assets/images/about.jpg";
 import conceptLogo from "@/assets/images/concept.svg";
 import galleryLogo from "@/assets/images/gallery.svg";
 import teamLogo from "@/assets/images/team.svg";
@@ -99,6 +102,7 @@ export default {
     PSectionHeader,
     PBlogLinkButton,
     SPagetop,
+    SFirstMessage,
     SAbout,
     SConcept,
     SGallery,
