@@ -29,7 +29,7 @@
       :logo="conceptLogo",
       title="コンセプト",
       subtitle="Our Concept",
-      description="かくれんぼの設計にあたり"
+      description="施術のこだわり"
     )
     s-concept
   section.section

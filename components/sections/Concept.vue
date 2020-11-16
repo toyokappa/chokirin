@@ -2,47 +2,45 @@
 .concepts
   .container-fluid
     .row
-      .col-lg-1.col-sm-1.mb-lg-0.mb-5
-        .person
-          img(src="@/assets/images/seeker.svg")
-      .offset-lg-2.offset-sm-3
-      .concept.col-lg-2.col-sm-4.mb-lg-0.mb-5
-        .person
-          img(src="@/assets/images/hider1.svg")
-        .catch
-          | 大人も子供も楽しめる
-        .explain
-          | 体力だけでなく隠れる上手さ、鬼を出し抜く戦略性を活かせるゲームを企画しています。
-      .offset-lg-0.offset-sm-4
-      .offset-lg-0.offset-sm-2
-      .concept.col-lg-2.col-sm-4.mb-lg-0.mb-5
-        .person
-          img(src="@/assets/images/hider2.svg")
-        .catch
-          | 運動不足の解消に
-        .explain
-          | じっと隠れているだけでは勝てない設計をしています。勝つためには走ることも重要です。
-      .concept.col-lg-2.col-sm-4.mb-lg-0.mb-5
-        .person
-          img(src="@/assets/images/hider3.svg")
-        .catch
-          | 3密を避けて安全に
-        .explain
-          | 屋外かつソーシャルディスタンスを保って遊べる、それがかくれんぼのいいところです。
+      .offset-lg-2
+      .col-lg-8
+        .row
+          .concept.col-sm-4.mb-lg-0.mb-5
+            .person
+              img(src="@/assets/images/hair1.svg")
+            .catch
+              | くせ毛カットへのこだわり
+            .explain
+              | くせ毛を活かした丁寧なカットを心がけています。状況に応じてパーマやストレートの提案も。豊富な経験を活かし貴方にあったスタイルで施術をいたします。
+          .concept.col-sm-4.mb-lg-0.mb-5
+            .person
+              img(src="@/assets/images/hair2.svg")
+            .catch
+              | カラーへのこだわり
+            .explain
+              | 髪がすぐに明るくなってしまう。いつも同じ髪色になってしまう。そんな悩みを解決するため50種類以上のカラーから貴方にあった調合で施術をいたします。
+          .concept.col-sm-4.mb-lg-0.mb-5
+            .person
+              img(src="@/assets/images/hair3.svg")
+            .catch
+              | ダメージケアへのこだわり
+            .explain
+              | ダメージの原因を見極めてChokirinオリジナルのヘアケア剤を使用しすることで、ダメージによるパサつきを改善して、艶のある美しい髪に導きます。
 </template>
 
 <style lang="sass" scoped>
 .concepts
   text-align: center
   .person
-    margin-bottom: 10px
+    margin-bottom: 20px
     img
-      height: 180px
+      height: 100px
   .catch
-    font-size: 16px
+    font-size: 18px
     font-weight: bold
     margin-bottom: 20px
   .explain
+    font-size: 16px
     letter-spacing: 1px
     line-height: 2
 </style>
