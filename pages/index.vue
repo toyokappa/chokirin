@@ -9,11 +9,21 @@
   section.section
     p-section-header#concept(
       :logo="aboutLogo",
+      logoSize="lg",
       title="美容室chokirin",
       subtitle="What's Chokirin?",
       description="美容室の特徴"
     )
     s-about
+  section.section
+    p-section-header#concept(
+      :logo="ownerPhoto",
+      logoSize="lg",
+      title="北爪 陽",
+      subtitle="Kitazume Akira",
+      description="Salon Owner"
+    )
+    s-owner
   section.section
     p-section-header#concept(
       :logo="conceptLogo",
@@ -78,6 +88,7 @@ import PBlogLinkButton from "@/components/parts/BlogLinkButton";
 import SPagetop from "@/components/sections/Pagetop";
 import SFirstMessage from "@/components/sections/FirstMessage";
 import SAbout from "@/components/sections/About";
+import SOwner from "@/components/sections/Owner";
 import SConcept from "@/components/sections/Concept";
 import SGallery from "@/components/sections/Gallery";
 import SGallerySp from "@/components/sections/GallerySp";
@@ -87,6 +98,7 @@ import SEvent from "@/components/sections/Event";
 import SContact from "@/components/sections/Contact";
 
 import aboutLogo from "@/assets/images/about.jpg";
+import ownerPhoto from "@/assets/images/owner-photo.png";
 import conceptLogo from "@/assets/images/concept.svg";
 import galleryLogo from "@/assets/images/gallery.svg";
 import teamLogo from "@/assets/images/team.svg";
@@ -104,6 +116,7 @@ export default {
     SPagetop,
     SFirstMessage,
     SAbout,
+    SOwner,
     SConcept,
     SGallery,
     SGallerySp,
@@ -115,6 +128,7 @@ export default {
   data() {
     return {
       aboutLogo,
+      ownerPhoto,
       conceptLogo,
       galleryLogo,
       teamLogo,

@@ -1,7 +1,7 @@
 <template lang="pug">
 .section-header
   .section-logo
-    img(v-lazy="logo")
+    img(v-lazy="logo", :class="{ 'logo-lg': logoSize == 'lg' }")
   .section-title(:style="`color: ${titleColor};`") {{ title }}
   .section-subtitle(:style="`color: ${subtitleColor};`") {{ subtitle }}
   .section-description {{ description }}
@@ -11,6 +11,9 @@
 export default {
   props: {
     logo: {
+      type: String,
+    },
+    logoSize: {
       type: String,
     },
     title: {
@@ -63,6 +66,8 @@ export default {
     .section-logo
       img
         width: 80px
+        &.logo-lg
+          width: 150px
     .section-title
       font-size: 40px
     .section-subtitle
