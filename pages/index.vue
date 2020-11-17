@@ -1,7 +1,7 @@
 <template lang="pug">
 #wrapper
   g-header
-  event-button(:event="event")
+  // event-button(:event="event")
   section.section
     s-pagetop
   section.section
@@ -35,37 +35,29 @@
   section.section
     p-section-header#gallery(
       :logo="galleryLogo",
-      title="ギャラリー",
+      title="店舗風景",
       subtitle="Photo Gallery",
-      description="百聞は一見にしかず"
+      description="自慢の店舗の雰囲気を"
     )
     s-gallery(:gallery="gallery")
     s-gallery-sp(:gallery="gallery")
-  section.section
-    p-section-header#team(
-      :logo="teamLogo",
-      title="運営チーム",
-      subtitle="Team Member",
-      description="ともに歩む仲間たち"
-    )
-    s-team(:memberList="memberList")
   section.section
     p-section-header#blog(
       :logo="blogLogo",
       title="最新情報",
       subtitle="Recent Blog Posts",
-      description="最新のチャレンジや動向をコンテンツとしてお届け"
+      description="最新の動向をコンテンツとしてお届け"
     )
     s-blog(:blogPosts="blogPosts")
     p-blog-link-button
   section.section
     p-section-header#event(
       :logo="eventLogo",
-      title="次回開催予定",
-      subtitle="Event Schedule",
-      description="戦士たちよ剣を握れ"
+      title="店舗案内",
+      subtitle="information",
+      description="ご来店に当たり"
     )
-    s-event(:event="event")
+    s-store-info
   section.section.section-dark
     p-section-header#contact(
       :logo="contactLogo",
@@ -94,7 +86,7 @@ import SGallery from "@/components/sections/Gallery";
 import SGallerySp from "@/components/sections/GallerySp";
 import STeam from "@/components/sections/Team";
 import SBlog from "@/components/sections/Blog";
-import SEvent from "@/components/sections/Event";
+import SStoreInfo from "@/components/sections/StoreInfo";
 import SContact from "@/components/sections/Contact";
 
 import aboutLogo from "@/assets/images/about.jpg";
@@ -122,7 +114,7 @@ export default {
     SGallerySp,
     STeam,
     SBlog,
-    SEvent,
+    SStoreInfo,
     SContact,
   },
   data() {
@@ -156,18 +148,10 @@ export default {
     });
     const blogPosts = blogRes.items;
 
-    const eventRes = await app.$ctfClient.getEntries({
-      content_type: "event",
-      order: "-sys.createdAt",
-      limit: 1,
-    });
-    const event = eventRes.items[0];
-
     return {
       gallery,
       memberList,
       blogPosts,
-      event,
     };
   },
   head() {

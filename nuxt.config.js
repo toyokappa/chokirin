@@ -78,6 +78,7 @@ export default {
     { src: '~/plugins/contentful.js' },
     { src: '~/plugins/dateFormat.js' },
     { src: '~/plugins/firebaseFunctions.js' },
+    { src: '~/plugins/googleMaps.js', ssr: false },
     { src: '~/plugins/lazyLoad.js' },
     { src: '~/plugins/markdownit.js' },
     { src: '~/plugins/youtube.js' },
