@@ -1,7 +1,7 @@
 <template lang="pug">
 footer.footer
   span &copy;
-  strong.mr-1 TOYOKAWA YUTA
+  strong.mr-1 CHOKIRIN
   span 2020
 </template>
 

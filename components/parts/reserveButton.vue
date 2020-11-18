@@ -1,6 +1,6 @@
 <template lang="pug">
-.blog-link-button
-  n-link.blog-link(to="/blogs")
+.reserve--button
+  n-link.reserve-link(to="/blogs")
     strong ご予約はコチラ
     fa.ml-2(:icon="faAngleDoubleRight")
 </template>
@@ -18,9 +18,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.blog-link
+.reserve-link
   color: black
   font-family: $en-accent-family
+  background-color: white
   padding: 15px 20px
   border: 2px solid black
   &:hover
@@ -28,9 +29,9 @@ export default {
     text-decoration: none
     background-color: black
   @include media-breakpoint-down(sm)
-    .blog-link
+    .reserve-link
       font-size: 18px
   @include media-breakpoint-down(xs)
-    .blog-link
+    .reserve-link
       font-size: 14px
 </style>

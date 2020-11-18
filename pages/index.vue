@@ -61,13 +61,13 @@
   section.section.section-dark
     p-section-header#contact(
       :logo="contactLogo",
-      title="お問い合わせ",
-      subtitle="Get In Touch",
-      description="気兼ねなく お気軽に ご連絡ください",
+      title="最後に",
+      subtitle="Last Message",
+      description="オーナーの想い",
       titleColor="#FFC32A",
       subtitleColor="white"
     )
-    s-contact
+    s-last-message
   g-footer
 </template>
 
@@ -84,10 +84,10 @@ import SOwner from "@/components/sections/Owner";
 import SConcept from "@/components/sections/Concept";
 import SGallery from "@/components/sections/Gallery";
 import SGallerySp from "@/components/sections/GallerySp";
-import STeam from "@/components/sections/Team";
 import SBlog from "@/components/sections/Blog";
 import SStoreInfo from "@/components/sections/StoreInfo";
 import SContact from "@/components/sections/Contact";
+import SLastMessage from "@/components/sections/LastMessage";
 
 import aboutLogo from "@/assets/images/about.jpg";
 import ownerPhoto from "@/assets/images/owner-photo.png";
@@ -112,10 +112,10 @@ export default {
     SConcept,
     SGallery,
     SGallerySp,
-    STeam,
     SBlog,
     SStoreInfo,
     SContact,
+    SLastMessage,
   },
   data() {
     return {
