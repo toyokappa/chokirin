@@ -35,6 +35,14 @@
   section.section
     p-section-header#gallery(
       :logo="galleryLogo",
+      title="お客様の声",
+      subtitle="Photo And Message",
+      description="実績とお客様の声を添えて"
+    )
+    s-photo-tile
+  section.section
+    p-section-header#gallery(
+      :logo="galleryLogo",
       title="店舗風景",
       subtitle="Photo Gallery",
       description="自慢の店舗の雰囲気を"
@@ -82,6 +90,7 @@ import SFirstMessage from "@/components/sections/FirstMessage";
 import SAbout from "@/components/sections/About";
 import SOwner from "@/components/sections/Owner";
 import SConcept from "@/components/sections/Concept";
+import SPhotoTile from "@/components/sections/PhotoTile";
 import SGallery from "@/components/sections/Gallery";
 import SGallerySp from "@/components/sections/GallerySp";
 import SBlog from "@/components/sections/Blog";
@@ -110,6 +119,7 @@ export default {
     SAbout,
     SOwner,
     SConcept,
+    SPhotoTile,
     SGallery,
     SGallerySp,
     SBlog,
