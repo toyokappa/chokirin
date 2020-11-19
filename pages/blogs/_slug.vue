@@ -7,14 +7,14 @@
     m-next-prev(:nextPost="nextPost", :prevPost="prevPost")
   section.section.section-dark
     p-section-header(
-      :logo="contactLogo",
-      title="お問い合わせ",
-      subtitle="Get In Touch",
-      description="気兼ねなく お気軽に ご連絡ください",
+      :logo="reserveLogo",
+      title="最後に",
+      subtitle="Last Message",
+      description="オーナーの想い",
       titleColor="#FFC32A",
       subtitleColor="white"
     )
-    s-contact
+    s-last-message
   g-footer
 </template>
 
@@ -25,9 +25,9 @@ import PBlogTitle from "@/components/parts/BlogTitle";
 import PSectionHeader from "@/components/parts/SectionHeader";
 import MNextPrev from "@/components/modules/NextPrev";
 import SBlogPost from "@/components/sections/BlogPost";
-import SContact from "@/components/sections/Contact";
+import SLastMessage from "@/components/sections/LastMessage";
 
-import contactLogo from "@/assets/images/contact.svg";
+import reserveLogo from "@/assets/images/reserve.svg";
 
 export default {
   components: {
@@ -37,11 +37,11 @@ export default {
     PSectionHeader,
     MNextPrev,
     SBlogPost,
-    SContact,
+    SLastMessage,
   },
   data() {
     return {
-      contactLogo,
+      reserveLogo,
     };
   },
   async asyncData({ app, params, payload }) {

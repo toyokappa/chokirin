@@ -3,7 +3,7 @@
   .container
     n-link.blog-link(to="/blogs")
       span.mr-2 Go to
-      strong Kakurenbo's Blog
+      strong Chokirin's Blog
       fa.ml-2(:icon="faAngleDoubleRight")
 </template>
 

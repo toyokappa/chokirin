@@ -4,7 +4,7 @@ header.navbar.navbar-expand-lg.header-nav
     n-link.navbar-brand(to="/")
       fa.mr-2(:icon="faAngleDoubleLeft")
       span.mr-2 Back to
-      strong Kakurenbo's Site
+      strong Chokirin's Site
 </template>
 
 <script>
@@ -22,7 +22,8 @@ export default {
 <style lang="sass" scoped>
 .header-nav
   font-family: $en-accent-family
-  background-color: $accent-color
+  background-color: white
+  border-bottom: 3px solid $accent-color
   a.navbar-brand
     color: $primary-grey
   @include media-breakpoint-down(xs)
