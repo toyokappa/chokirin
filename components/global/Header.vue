@@ -3,6 +3,8 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
   :class="{ 'no-icon': $store.state.isFixed }"
 )
   nav.container
+    n-link.navbar-brand(v-scroll-to="'#pageTop'", to)
+      img.logo(v-lazy="logo")
     .toggle-button
       client-only
         tasty-burger-button(
@@ -13,7 +15,7 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
           @toggle="toggleNavMenu",
           ref="burgerButton"
         )
-    .collapse-menu.mx-auto
+    .collapse-menu
       ul.navbar-nav
         li.nav-item
           n-link.nav-link(v-scroll-to="'#about'", to)
@@ -90,6 +92,7 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
 </template>
 
 <script>
+import logo from "@/assets/images/logo.jpg";
 import about from "@/assets/images/about.svg";
 import concept from "@/assets/images/concept.svg";
 import gallery from "@/assets/images/gallery.svg";
@@ -101,6 +104,7 @@ import contact from "@/assets/images/contact.svg";
 export default {
   data() {
     return {
+      logo,
       about,
       concept,
       gallery,
@@ -129,15 +133,16 @@ export default {
   height: 50px
   div.icon
     display: none
+  .logo
+    height: 30px
 .header-nav
   height: 100px
   font-family: $en-accent-family
   text-align: center
-  background-color: $accent-color
+  background-color: white
+  border-bottom: 3px solid $accent-color
   .logo
-    font-weight: bold
-    padding: 0 10px
-    border: 3px solid black
+    height: 65px
   .toggle-button
     display: none
     margin-top: 5px
@@ -159,6 +164,8 @@ export default {
         img
           width: 20px
 @include media-breakpoint-down(md)
+  .logo
+    height: 30px !important
   .toggle-button
     display: block !important
   .collapse-menu
@@ -170,7 +177,7 @@ export default {
     left: 50%
     transform: translateX(-50%)
     width: 100%
-    background-color: $accent-color
+    background-color: white
     visibility: hidden
     opacity: 0
     transition: 0.3s

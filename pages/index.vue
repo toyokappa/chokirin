@@ -3,7 +3,7 @@
   g-header
   // event-button(:event="event")
   section.section
-    s-pagetop
+    s-pagetop#pageTop
   section.section
     s-first-message
   section.section
@@ -98,7 +98,7 @@ import SStoreInfo from "@/components/sections/StoreInfo";
 import SContact from "@/components/sections/Contact";
 import SLastMessage from "@/components/sections/LastMessage";
 
-import aboutLogo from "@/assets/images/about.jpg";
+import aboutLogo from "@/assets/images/logo.jpg";
 import ownerPhoto from "@/assets/images/owner-photo.png";
 import conceptLogo from "@/assets/images/concept.svg";
 import galleryLogo from "@/assets/images/gallery.svg";

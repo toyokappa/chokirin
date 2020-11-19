@@ -1,6 +1,6 @@
 <template lang="pug">
 .welcome
-  #pageTop.page-top(v-lazy:background-image="topImage")
+  .page-top(v-lazy:background-image="topImage")
 </template>
 
 <script>
