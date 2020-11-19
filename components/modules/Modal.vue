@@ -1,15 +1,23 @@
 <template lang="pug">
-transition(name="modal", appear)
+transition(name="modal", appear, v-if="modalFlag")
   .modal-overlay(@click="closeModal")
     slot
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      modalFlag: false,
+    };
+  },
   methods: {
+    openModal() {
+      this.modalFlag = true;
+    },
     closeModal(event) {
       if (event.target.classList.contains("modal-overlay")) {
-        this.$emit("closeModal");
+        this.modalFlag = false;
       }
     },
   },

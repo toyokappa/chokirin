@@ -3,7 +3,7 @@
   .container
     .row.row-3
       .col-sm-3.col-4.mb-3
-        .photo(@click="openModal()")
+        .photo(@click="$refs.modal.openModal()")
       .col-sm-3.col-4.mb-3
         .photo
       .col-sm-3.col-4.mb-3
@@ -26,7 +26,7 @@
         .photo
       .col-sm-3.col-4.mb-3
         .photo
-  m-modal(v-if="modalFlag", @closeModal="closeModal")
+  m-modal(ref="modal")
     .work-detail
       .work-photo
       .work-content
@@ -46,19 +46,6 @@ import MModal from "@/components/modules/Modal";
 export default {
   components: {
     MModal,
-  },
-  data() {
-    return {
-      modalFlag: false,
-    };
-  },
-  methods: {
-    openModal() {
-      this.modalFlag = true;
-    },
-    closeModal() {
-      this.modalFlag = false;
-    },
   },
 };
 </script>
