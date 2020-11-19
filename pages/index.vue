@@ -95,7 +95,6 @@ import SGallery from "@/components/sections/Gallery";
 import SGallerySp from "@/components/sections/GallerySp";
 import SBlog from "@/components/sections/Blog";
 import SStoreInfo from "@/components/sections/StoreInfo";
-import SContact from "@/components/sections/Contact";
 import SLastMessage from "@/components/sections/LastMessage";
 
 import aboutLogo from "@/assets/images/logo.jpg";
@@ -124,7 +123,6 @@ export default {
     SGallerySp,
     SBlog,
     SStoreInfo,
-    SContact,
     SLastMessage,
   },
   data() {
