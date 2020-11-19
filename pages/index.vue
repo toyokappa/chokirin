@@ -2,12 +2,12 @@
 #wrapper
   g-header
   // event-button(:event="event")
-  section.section
-    s-pagetop#pageTop
+  section#pageTop.section
+    s-pagetop
   section.section
     s-first-message
   section.section
-    p-section-header#concept(
+    p-section-header#about(
       :logo="aboutLogo",
       logoSize="lg",
       title="美容室chokirin",
@@ -16,7 +16,7 @@
     )
     s-about
   section.section
-    p-section-header#concept(
+    p-section-header#owner(
       :logo="ownerPhoto",
       logoSize="lg",
       title="北爪 陽",
@@ -33,7 +33,7 @@
     )
     s-concept
   section.section
-    p-section-header#gallery(
+    p-section-header#work(
       :logo="galleryLogo",
       title="お客様の声",
       subtitle="Photo And Message",
@@ -59,7 +59,7 @@
     s-blog(:blogPosts="blogPosts")
     p-blog-link-button
   section.section
-    p-section-header#event(
+    p-section-header#info(
       :logo="eventLogo",
       title="店舗案内",
       subtitle="information",
@@ -67,7 +67,7 @@
     )
     s-store-info
   section.section.section-dark
-    p-section-header#contact(
+    p-section-header#reserve(
       :logo="contactLogo",
       title="最後に",
       subtitle="Last Message",

@@ -23,35 +23,40 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
               img(v-lazy="about")
             .text ABOUT
         li.nav-item
+          n-link.nav-link(v-scroll-to="'#owner'", to)
+            .icon
+              img(v-lazy="owner")
+            .text OWNER
+        li.nav-item
           n-link.nav-link(v-scroll-to="'#concept'", to)
             .icon
               img(v-lazy="concept")
             .text CONCEPT
+        li.nav-item
+          n-link.nav-link(v-scroll-to="'#work'", to)
+            .icon
+              img(v-lazy="work")
+            .text WORK
         li.nav-item
           n-link.nav-link(v-scroll-to="'#gallery'", to)
             .icon
               img(v-lazy="gallery")
             .text GALLERY
         li.nav-item
-          n-link.nav-link(v-scroll-to="'#team'", to)
-            .icon
-              img(v-lazy="team")
-            .text TEAM
-        li.nav-item
           n-link.nav-link(v-scroll-to="'#blog'", to)
             .icon
               img(v-lazy="blog")
             .text BLOG
         li.nav-item
-          n-link.nav-link(v-scroll-to="'#event'", to)
+          n-link.nav-link(v-scroll-to="'#info'", to)
             .icon
-              img(v-lazy="event")
-            .text EVENT
+              img(v-lazy="info")
+            .text INFO
         li.nav-item
-          n-link.nav-link(v-scroll-to="'#contact'", to)
+          n-link.nav-link(v-scroll-to="'#reserve'", to)
             .icon
-              img(v-lazy="contact")
-            .text CONTACT
+              img(v-lazy="reserve")
+            .text RESERVE
   #navbarMenu.container
     ul.navbar-nav(@click="toggleActive")
       li.nav-item
@@ -60,58 +65,65 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
             img(v-lazy="about")
           span.text ABOUT
       li.nav-item
+        n-link.nav-link(v-scroll-to="'#owner'", to)
+          span.icon
+            img(v-lazy="owner")
+          span.text OWNER
+      li.nav-item
         n-link.nav-link(v-scroll-to="'#concept'", to)
           span.icon
             img(v-lazy="concept")
           span.text CONCEPT
+      li.nav-item
+        n-link.nav-link(v-scroll-to="'#work'", to)
+          span.icon
+            img(v-lazy="work")
+          span.text WORK
       li.nav-item
         n-link.nav-link(v-scroll-to="'#gallery'", to)
           span.icon
             img(v-lazy="gallery")
           span.text GALLERY
       li.nav-item
-        n-link.nav-link(v-scroll-to="'#team'", to)
-          span.icon
-            img(v-lazy="team")
-          span.text TEAM
-      li.nav-item
         n-link.nav-link(v-scroll-to="'#blog'", to)
           span.icon
             img(v-lazy="blog")
           span.text BLOG
       li.nav-item
-        n-link.nav-link(v-scroll-to="'#event'", to)
+        n-link.nav-link(v-scroll-to="'#info'", to)
           span.icon
-            img(v-lazy="event")
-          span.text EVENT
+            img(v-lazy="info")
+          span.text INFO
       li.nav-item
-        n-link.nav-link(v-scroll-to="'#contact'", to)
+        n-link.nav-link(v-scroll-to="'#reserve'", to)
           span.icon
-            img(v-lazy="contact")
-          span.text CONTACT
+            img(v-lazy="reserve")
+          span.text RESERVE
 </template>
 
 <script>
 import logo from "@/assets/images/logo.jpg";
 import about from "@/assets/images/about.svg";
+import owner from "@/assets/images/owner.svg";
 import concept from "@/assets/images/concept.svg";
+import work from "@/assets/images/work.svg";
 import gallery from "@/assets/images/gallery.svg";
-import team from "@/assets/images/team.svg";
 import blog from "@/assets/images/blog.svg";
-import event from "@/assets/images/event.svg";
-import contact from "@/assets/images/contact.svg";
+import info from "@/assets/images/info.svg";
+import reserve from "@/assets/images/reserve.svg";
 
 export default {
   data() {
     return {
       logo,
       about,
+      owner,
       concept,
+      work,
       gallery,
-      team,
       blog,
-      event,
-      contact,
+      info,
+      reserve,
       activeLink: "",
       isActive: false,
     };
