@@ -34,7 +34,7 @@
     s-concept
   section.section
     p-section-header#work(
-      :logo="galleryLogo",
+      :logo="workLogo",
       title="お客様の声",
       subtitle="Photo And Message",
       description="実績とお客様の声を添えて"
@@ -60,7 +60,7 @@
     p-blog-link-button
   section.section
     p-section-header#info(
-      :logo="eventLogo",
+      :logo="infoLogo",
       title="店舗案内",
       subtitle="information",
       description="ご来店に当たり"
@@ -68,7 +68,7 @@
     s-store-info
   section.section.section-dark
     p-section-header#reserve(
-      :logo="contactLogo",
+      :logo="reserveLogo",
       title="最後に",
       subtitle="Last Message",
       description="オーナーの想い",
@@ -101,11 +101,11 @@ import SLastMessage from "@/components/sections/LastMessage";
 import aboutLogo from "@/assets/images/logo.jpg";
 import ownerPhoto from "@/assets/images/owner-photo.png";
 import conceptLogo from "@/assets/images/concept.svg";
+import workLogo from "@/assets/images/work.svg";
 import galleryLogo from "@/assets/images/gallery.svg";
-import teamLogo from "@/assets/images/team.svg";
 import blogLogo from "@/assets/images/blog.svg";
-import eventLogo from "@/assets/images/event.svg";
-import contactLogo from "@/assets/images/contact.svg";
+import infoLogo from "@/assets/images/info.svg";
+import reserveLogo from "@/assets/images/reserve.svg";
 
 export default {
   components: {
@@ -132,11 +132,11 @@ export default {
       aboutLogo,
       ownerPhoto,
       conceptLogo,
+      workLogo,
       galleryLogo,
-      teamLogo,
       blogLogo,
-      eventLogo,
-      contactLogo,
+      infoLogo,
+      reserveLogo,
     };
   },
   async asyncData({ app }) {
