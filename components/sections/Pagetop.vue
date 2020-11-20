@@ -5,7 +5,6 @@
 
 <script>
 import topImage from "@/assets/images/pagetop.jpg";
-import logo from "@/assets/images/logo.svg";
 import GHeader from "@/components/global/Header";
 
 export default {
@@ -15,7 +14,6 @@ export default {
   data() {
     return {
       topImage,
-      logo,
     };
   },
 };
