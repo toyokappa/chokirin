@@ -1,4 +1,4 @@
-# kakurenbo-lp
+# chokirin
 
 ## Build Setup
 

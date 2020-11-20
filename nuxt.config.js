@@ -1,3 +1,4 @@
+const domain = "chokirin.com"
 const pageLimit = 10
 
 const fetchBlogRes = async () => {
@@ -34,7 +35,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { name: 'keywords', content: 'かくれんぼ,群馬,かくれんぼ in ぐんま,グンマ' },
+      { name: 'keywords', content: '前橋 美容室,クセ毛 美容室,ダメージ 美容室,chokirin,ちょきりん,チョキリン' },
       { property: 'fb:app_id', content: '328198145005843' },
       { name: 'msapplication-TileColor', content: '#00aba9' },
       { name: 'theme-color', content: '#1f2233' },
@@ -52,6 +53,7 @@ export default {
   env: {
     ctfSpaceId: process.env.CTF_SPACE_ID,
     ctfCdaAccessToken: process.env.CTF_CDA_ACCESS_TOKEN,
+    domain,
     pageLimit,
   },
   loading: '@/components/modules/Loading.vue',
@@ -142,7 +144,7 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://kakurenbo.club',
+    hostname: `https://${domain}`,
     gzip: true
   },
   robots: {
@@ -150,7 +152,7 @@ export default {
     // クローリングしないパスを記述
     Disallow: '/_nuxt',
     // sitemap.xmlのURLを記述
-    Sitemap: 'https://example.com/sitemap.xml',
+    Sitemap: `https://${domain}/sitemap.xml`,
   },
   fontawesome: {
     component: 'fa'

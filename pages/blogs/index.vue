@@ -72,12 +72,12 @@ export default {
   },
   head() {
     return {
-      title: "かくれんぼ in ぐんま Official Blog",
+      title: "ちょきりん Official Blog",
       meta: [
         {
           name: "description",
           content:
-            "群馬県でかくれんぼの楽しさを広めるために活動している団体の公式ブログ。老若男女誰でも楽しめる、そんなかくれんぼのイベント情報を発信しています。",
+            "前橋の美容室chokirinの公式ブログ。クセ毛やダメージ毛に悩んでいる方々に向け情報を発信しています。",
         },
       ],
     };

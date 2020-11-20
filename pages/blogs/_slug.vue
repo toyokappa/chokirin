@@ -83,9 +83,9 @@ export default {
   },
   head() {
     const { title, description, eyecatch } = this.blogPost.fields;
-    const pageTitle = `${title} | かくれんぼ in ぐんま Official Blog`;
+    const pageTitle = `${title} | ちょきりん Official Blog`;
     const imageUrl = `https:${this.parseEyecatch(eyecatch)}`;
-    const pageUrl = `https://kakurenbo.club/${this.$route.path}`;
+    const pageUrl = `https://${process.env.domain}/${this.$route.path}`;
     return {
       title: pageTitle,
       meta: [

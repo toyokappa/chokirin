@@ -164,11 +164,12 @@ export default {
     };
   },
   head() {
-    const pageTitle = "かくれんぼ in ぐんま Official Site";
+    const pageTitle =
+      "群馬県前橋市｜くせ毛・ダメージ美容室chokirin(チョキリン)";
     const description =
-      "群馬県でかくれんぼの楽しさを広めるために活動している団体の公式サイト。老若男女誰でも楽しめる、そんなかくれんぼのイベント情報を発信しています。";
-    const imageUrl = "https://kakurenbo.club/ogp.jpg";
-    const pageUrl = "https://kakurenbo.club";
+      "前橋の美容室chokirin（チョキリン）は、クセ毛やダメージ毛の方におすすめの美容室です。";
+    const imageUrl = `https://${process.env.domain}/ogp.jpg`;
+    const pageUrl = `https://${process.env.domain}`;
     return {
       title: pageTitle,
       meta: [
