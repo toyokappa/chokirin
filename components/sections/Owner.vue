@@ -1,5 +1,5 @@
 <template lang="pug">
-.first-message
+.owner
   .content
     section
       p 1988年4月15日生まれ。
@@ -16,7 +16,7 @@
 </template>
 
 <style lang="sass" scoped>
-.first-message
+.owner
   text-align: center
   .content
     font-size: 16px
@@ -27,8 +27,11 @@
       p
         margin-bottom: 5px
 @media screen and (max-width: 480px)
-  .first-message
+  .owner
     .content
       text-align: left
       padding: 0 25px
+      p
+        margin-bottom: 0
+        display: inline
 </style>

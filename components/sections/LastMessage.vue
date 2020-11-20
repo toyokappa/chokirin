@@ -47,4 +47,7 @@ export default {
     .content
       text-align: left
       padding: 0 25px
+      p
+        margin-bottom: 0
+        display: inline
 </style>

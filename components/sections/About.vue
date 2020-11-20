@@ -42,7 +42,9 @@ export default {
       margin-bottom: 5px
 @media screen and (max-width: 480px)
   .about
-    .content
-      text-align: left
-      padding: 0 25px
+    img
+      margin-bottom: 20px
+    p
+      margin-bottom: 0
+      display: inline
 </style>
