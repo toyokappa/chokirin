@@ -47,7 +47,7 @@
             span.value 前橋駅
             span.unit もしくは
             span.value 前橋大島駅
-    .row
+    .row.mt-4
       .offset-lg-1.col-lg-11.col-sm-12
         p-reserve-button
 </template> 
