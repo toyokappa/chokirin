@@ -62,7 +62,7 @@ import {
   faBed,
   faSubway,
 } from "@fortawesome/free-solid-svg-icons";
-import pReserveButton from "@/components/parts/reserveButton";
+import pReserveButton from "@/components/parts/ReserveButton";
 import mapIcon from "@/assets/images/map-icon.png";
 
 export default {

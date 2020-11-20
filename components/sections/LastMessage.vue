@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import pReserveButton from "@/components/parts/reserveButton";
+import pReserveButton from "@/components/parts/ReserveButton";
 
 export default {
   components: {
