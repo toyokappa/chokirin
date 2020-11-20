@@ -39,7 +39,7 @@
       subtitle="Photo And Message",
       description="実績とお客様の声を添えて"
     )
-    s-photo-tile
+    s-photo-tile(:posts="workPosts")
   section.section
     p-section-header#gallery(
       :logo="galleryLogo",
@@ -138,6 +138,13 @@ export default {
     };
   },
   async asyncData({ app }) {
+    const workRes = await app.$ctfClient.getEntries({
+      content_type: "work",
+      order: "-sys.createdAt",
+      limit: 12,
+    });
+    const workPosts = workRes.items;
+
     const galleryRes = await app.$ctfClient.getEntries({
       content_type: "gallery",
     });
@@ -151,6 +158,7 @@ export default {
     const blogPosts = blogRes.items;
 
     return {
+      workPosts,
       gallery,
       blogPosts,
     };

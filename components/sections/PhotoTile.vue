@@ -2,93 +2,57 @@
 .photo-tile
   .container
     .row.row-3
-      .col-sm-3.col-4.mb-3
-        .photo(@click="$refs.modal.openModal()")
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
-      .col-sm-3.col-4.mb-3
-        .photo
+      .col-sm-3.col-4.mb-3(v-for="post in posts", :key="post.sys.id")
+        .photo(
+          v-lazy:background-image="post.fields.photo.fields.file.url",
+          @click="openModal(post)"
+        )
+      .col-sm-3.col-4.mb-3(v-for="n in 12 - posts.length", :key="n")
+        .no-photo
   m-modal(ref="modal")
-    .work-detail
-      .work-photo
-      .work-content
-        .work-name
-          | みゆさん
-        .work-profile
-          | 20代後半女性（主婦）
-        .work-comment
-          | 今日も縮毛矯正をしてもらいました。通いはじめてもうじき2年になりますが、毎回丁寧にしてくれます（＾ω＾）仕上がりも満足です。髪の量が多く癖なのですが、持ちも良いです。ありがとうございました！
-        .work-date
-          | 2018.09.14
+    p-work-detail(:post="currentPost")
 </template>
 
 <script>
 import MModal from "@/components/modules/Modal";
+import PWorkDetail from "@/components/parts/WorkDetail";
 
 export default {
   components: {
     MModal,
+    PWorkDetail,
+  },
+  props: {
+    posts: {
+      type: Array,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      currentPost: {},
+    };
+  },
+  methods: {
+    openModal(post) {
+      this.currentPost = post;
+      this.$refs.modal.openModal();
+    },
   },
 };
 </script>
 
 <style lang="sass" scoped>
 .photo-tile
-  .photo
+  .photo, .no-photo
     width: 100%
     padding-bottom: 100%
-    background-color: #c4c4c4
+  .photo
+    background-size: cover
+    background-position: center center
     cursor: pointer
-  .work-detail
-    width: 100%
-    max-width: 800px
-    height: 400px
-    display: flex
-    .work-photo
-      width: 100%
-      max-width: 400px
-      background-color: #c4c4c4
-    .work-content
-      width: 100%
-      max-width: 400px
-      background-color: white
-      padding: 20px
-      position: relative
-      .work-name
-        font-size: 20px
-        font-weight: bold
-        text-align: center
-        margin-bottom: 10px
-      .work-profile
-        font-size: 16px
-        text-align: center
-        margin-bottom: 30px
-      .work-comment
-        font-size: 16px
-        line-height: 1.8
-      .work-date
-        font-size: 14px
-        position: absolute
-        right: 20px
-        bottom: 20px
+  .no-photo
+    background-color: $muted-color
 .row-3
   margin-left: -0.5rem
   margin-right: -0.5rem
