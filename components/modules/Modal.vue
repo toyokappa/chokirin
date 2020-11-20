@@ -40,13 +40,13 @@ export default {
 // transition
 .modal-enter-active, .modal-leave-active
   transition: opacity 0.3s
-  &> *
+  & > div
     transition: opacity 0.3s, transform 0.4s
 .modal-leave-active
   transition: opacity 0.6s ease 0.4s
 .modal-enter, .modal-leave-to
   opacity: 0
-  &> *
+  & > div
     opacity: 0
     transform: translateY(-20px)
 </style>
