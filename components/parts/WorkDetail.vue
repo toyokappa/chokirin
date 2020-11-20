@@ -9,16 +9,14 @@
 </template>
 
 <script>
+import descriptionParserMixin from "@/components/mixins/descriptionParserMixin";
+
 export default {
+  mixins: [descriptionParserMixin],
   props: {
     post: {
       type: Object,
       required: true,
-    },
-  },
-  methods: {
-    parseDescription(text) {
-      return text.replace(/\n/g, "<br>");
     },
   },
 };

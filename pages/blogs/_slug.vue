@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import eyecatchParserMixin from "@/components/mixins/eyecatchParserMixin";
+
 import GFooter from "@/components/global/Footer";
 import PBlogHeader from "@/components/parts/BlogHeader";
 import PBlogTitle from "@/components/parts/BlogTitle";
@@ -30,6 +32,7 @@ import SLastMessage from "@/components/sections/LastMessage";
 import reserveLogo from "@/assets/images/reserve.svg";
 
 export default {
+  mixins: [eyecatchParserMixin],
   components: {
     GFooter,
     PBlogHeader,
@@ -98,11 +101,6 @@ export default {
         { property: "og:url", content: pageUrl },
       ],
     };
-  },
-  methods: {
-    parseEyecatch(data) {
-      return data ? data.fields.file.url : this.noPhoto;
-    },
   },
 };
 </script>
