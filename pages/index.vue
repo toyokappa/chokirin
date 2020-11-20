@@ -72,7 +72,7 @@
       title="最後に",
       subtitle="Last Message",
       description="オーナーの想い",
-      titleColor="#FFC32A",
+      titleColor="#C09A73",
       subtitleColor="white"
     )
     s-last-message
