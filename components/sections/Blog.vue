@@ -70,6 +70,7 @@ export default {
           color: $secondary-grey
           font-size: 14px
       .body
+        font-size: 16px
         color: $primary-grey
         line-height: 2
 </style>

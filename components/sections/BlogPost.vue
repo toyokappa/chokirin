@@ -74,5 +74,5 @@ export default {
       .title
         font-size: 20px
       .markdown-body
-        font-size: 14px
+        font-size: 16px
 </style>
