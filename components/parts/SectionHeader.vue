@@ -43,9 +43,6 @@ export default {
 <style lang="sass" scoped>
 .section-header
   text-align: center
-  margin-top: 50px
-  padding-top: 50px
-  padding-bottom: 80px
   .section-logo
     margin-bottom: 20px
   .section-title
@@ -62,7 +59,11 @@ export default {
     font-size: 16px
     font-weight: normal
     letter-spacing: 3px
-  @include media-breakpoint-up(sm)
+@include media-breakpoint-up(sm)
+  .section-header
+    margin-top: 50px
+    padding-top: 50px
+    padding-bottom: 80px
     .section-logo
       img
         width: 80px
@@ -74,10 +75,16 @@ export default {
       font-size: 20px
     .section-description
       font-size: 16px
-  @include media-breakpoint-down(xs)
+@include media-breakpoint-down(xs)
+  .section-header
+    margin-top: 20px
+    padding-top: 20px
+    padding-bottom: 50px
     .section-logo
       img
         width: 60px
+        &.logo-lg
+          width: 120px
     .section-title
       font-size: 30px
     .section-subtitle
