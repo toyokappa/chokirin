@@ -39,7 +39,7 @@
       subtitle="Photo And Message",
       description="実績とお客様の声を添えて"
     )
-    s-photo-tile(:posts="workPosts")
+    s-work(:posts="workPosts")
   section.section
     p-section-header#gallery(
       :logo="galleryLogo",
@@ -90,7 +90,7 @@ import SFirstMessage from "@/components/sections/FirstMessage";
 import SAbout from "@/components/sections/About";
 import SOwner from "@/components/sections/Owner";
 import SConcept from "@/components/sections/Concept";
-import SPhotoTile from "@/components/sections/PhotoTile";
+import SWork from "@/components/sections/Work";
 import SGallery from "@/components/sections/Gallery";
 import SGallerySp from "@/components/sections/GallerySp";
 import SBlog from "@/components/sections/Blog";
@@ -118,7 +118,7 @@ export default {
     SAbout,
     SOwner,
     SConcept,
-    SPhotoTile,
+    SWork,
     SGallery,
     SGallerySp,
     SBlog,

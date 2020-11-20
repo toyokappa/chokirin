@@ -1,5 +1,5 @@
 <template lang="pug">
-.photo-tile
+.work
   .container
     .row.row-3
       .col-sm-3.col-4.mb-3(v-for="post in posts", :key="post.sys.id")
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.photo-tile
+.work
   .photo, .no-photo
     width: 100%
     padding-bottom: 100%
