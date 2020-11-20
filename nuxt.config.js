@@ -50,12 +50,6 @@ export default {
     ]
   },
   env: {
-    firebaseApiKey: process.env.FIREBASE_API_KEY,
-    firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    firebaseDatabaseURL: process.env.FIREBASE_DATABASE_URL,
-    firebaseProjectId: process.env.FIREBASE_PROJECT_ID,
-    firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    firebaseMessageingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     ctfSpaceId: process.env.CTF_SPACE_ID,
     ctfCdaAccessToken: process.env.CTF_CDA_ACCESS_TOKEN,
     pageLimit,
@@ -77,7 +71,6 @@ export default {
     { src: '~/plugins/burgerButton.js', ssr: false },
     { src: '~/plugins/contentful.js' },
     { src: '~/plugins/dateFormat.js' },
-    { src: '~/plugins/firebaseFunctions.js' },
     { src: '~/plugins/googleMaps.js', ssr: false },
     { src: '~/plugins/lazyLoad.js' },
     { src: '~/plugins/markdownit.js' },

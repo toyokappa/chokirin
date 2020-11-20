@@ -5,7 +5,7 @@
       .offset-sm-1.col-sm-10
         .blog-post-header
           .image(
-            v-lazy:background-image="blogPost.fields.eyecatch.fields.file.url"
+            v-lazy:background-image="parseEyecatch(blogPost.fields.eyecatch)"
           )
           h1.title {{ blogPost.fields.title }}
           .created-at
@@ -18,18 +18,25 @@
 <script>
 import datetimeParserMixin from "@/components/mixins/datetimeParserMixin";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
+import noPhoto from "@/assets/images/no_photo.png";
 
 export default {
   mixins: [datetimeParserMixin],
   data() {
     return {
       faCalendarAlt,
+      noPhoto,
     };
   },
   props: {
     blogPost: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    parseEyecatch(data) {
+      data ? data.fields.file.url : this.noPhoto;
     },
   },
 };

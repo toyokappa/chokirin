@@ -5,7 +5,7 @@
       .col-lg-6(:class="index % 2 == 0 ? 'order-lg-1' : 'order-lg-2'")
         n-link.image(
           :to="`/blogs/${post.fields.slug}`",
-          v-lazy:background-image="post.fields.eyecatch.fields.file.url"
+          v-lazy:background-image="parseEyecatch(post.fields.eyecatch)"
         )
       .col-lg-6(:class="index % 2 == 0 ? 'order-lg-2' : 'order-lg-1'")
         .header
@@ -13,18 +13,20 @@
           .created-at
             fa.mr-2(:icon="faCalendarAlt")
             span {{ parseCreatedAt(post.sys.createdAt) }}
-        .body(v-html="parseDescription(post.fields.description)")
+        .body(v-html="parseDescription(post.fields.body)")
 </template>
 
 <script>
 import datetimeParserMixin from "@/components/mixins/datetimeParserMixin";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
+import noPhoto from "@/assets/images/no_photo.png";
 
 export default {
   mixins: [datetimeParserMixin],
   data() {
     return {
       faCalendarAlt,
+      noPhoto,
     };
   },
   props: {
@@ -34,8 +36,11 @@ export default {
     },
   },
   methods: {
+    parseEyecatch(data) {
+      return data ? data.fields.file.url : this.noPhoto;
+    },
     parseDescription(text) {
-      return text.replace(/\n/g, "<br>");
+      return `${text.substr(0, 200).replace(/\n/g, "<br>")}...`;
     },
   },
 };

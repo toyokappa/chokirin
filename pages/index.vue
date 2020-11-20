@@ -141,13 +141,7 @@ export default {
     const galleryRes = await app.$ctfClient.getEntries({
       content_type: "gallery",
     });
-    const gallery = galleryRes.items[0].fields.photos;
-
-    const memberRes = await app.$ctfClient.getEntries({
-      content_type: "member",
-      order: "fields.position",
-    });
-    const memberList = memberRes.items;
+    const gallery = galleryRes.items[0].fields.photo;
 
     const blogRes = await app.$ctfClient.getEntries({
       content_type: "blog",
@@ -158,7 +152,6 @@ export default {
 
     return {
       gallery,
-      memberList,
       blogPosts,
     };
   },
