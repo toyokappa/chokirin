@@ -81,7 +81,7 @@ export default {
   head() {
     const { title, description, eyecatch } = this.blogPost.fields;
     const pageTitle = `${title} | かくれんぼ in ぐんま Official Blog`;
-    const imageUrl = `https:${eyecatch.fields.file.url}`;
+    const imageUrl = `https:${this.parseEyecatch(eyecatch)}`;
     const pageUrl = `https://kakurenbo.club/${this.$route.path}`;
     return {
       title: pageTitle,
@@ -98,6 +98,11 @@ export default {
         { property: "og:url", content: pageUrl },
       ],
     };
+  },
+  methods: {
+    parseEyecatch(data) {
+      return data ? data.fields.file.url : this.noPhoto;
+    },
   },
 };
 </script>

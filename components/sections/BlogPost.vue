@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     parseEyecatch(data) {
-      data ? data.fields.file.url : this.noPhoto;
+      return data ? data.fields.file.url : this.noPhoto;
     },
   },
 };
