@@ -1,6 +1,6 @@
 <template lang="pug">
 transition(name="modal", appear, v-if="modalFlag")
-  .modal-overlay(@click="closeModal")
+  .modal-overlay.modal-close(@click="closeModal")
     slot
 </template>
 
@@ -16,7 +16,7 @@ export default {
       this.modalFlag = true;
     },
     closeModal(event) {
-      if (event.target.classList.contains("modal-overlay")) {
+      if (event.target.classList.contains("modal-close")) {
         this.modalFlag = false;
       }
     },

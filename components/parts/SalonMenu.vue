@@ -87,31 +87,43 @@ export default {
 .salon-menu
   background-color: white
   padding: 40px 80px
+  @include media-breakpoint-down(md)
+    padding: 10px 20px
   .title
     font-size: 24px
     font-weight: bold
     text-align: center
     margin-bottom: 30px
+    @include media-breakpoint-down(md)
+      font-size: 20px
+      margin-bottom: 20px
   .nav
-    margin-bottom: 20px
     justify-content: center
+    margin-bottom: 20px
+    @include media-breakpoint-down(md)
+      margin-bottom: 15px
     .nav-item
       font-weight: bold
+      transition: 0.3s
+      cursor: pointer
       border: 2px solid black
       padding: 5px 20px
       margin: 0 20px
-      transition: 0.3s
-      cursor: pointer
+      @include media-breakpoint-down(md)
+        margin: 0 10px
       &:hover, &.active
         color: white
         text-decoration: none
         background-color: black
   .menu
+    font-size: 18px
+    font-weight: bold
     width: 100%
     margin-bottom: 30px
+    @include media-breakpoint-down(md)
+      font-size: 16px
+      margin-bottom: 20px
     .menu-item
-      font-size: 18px
-      font-weight: bold
       height: 40px
       .name
         width: 250px
@@ -127,6 +139,8 @@ export default {
     margin-bottom: 10px
     transition: 0.3s
     cursor: pointer
+    @include media-breakpoint-down(md)
+      font-size: 14px
     &.line
       color: #00B900
       border: 2px solid #00B900
