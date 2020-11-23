@@ -80,7 +80,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$refs.map);
     const latlng = new this.$google.maps.LatLng(
       36.38563053781655,
       139.09477598205518
