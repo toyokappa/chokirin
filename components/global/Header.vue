@@ -57,6 +57,14 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
             .icon
               img(v-lazy="reserve")
             .text RESERVE
+        li.nav-item
+          a.nav-link(
+            href="javascript:void(0);",
+            @click="$refs.modal.openModal()"
+          )
+            .icon
+              img(v-lazy="menu")
+            .text MENU
   #navbarMenu.container
     ul.navbar-nav(@click="toggleActive")
       li.nav-item
@@ -99,9 +107,22 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
           span.icon
             img(v-lazy="reserve")
           span.text RESERVE
+      li.nav-item
+        a.nav-link(
+          href="javascript:void(0);",
+          @click="$refs.modal.openModal()"
+        )
+          span.icon
+            img(v-lazy="menu")
+          span.text MENU
+  m-modal(ref="modal")
+    p-salon-menu
 </template>
 
 <script>
+import MModal from "@/components/modules/Modal";
+import PSalonMenu from "@/components/parts/SalonMenu";
+
 import logo from "@/assets/images/logo.jpg";
 import about from "@/assets/images/about.svg";
 import owner from "@/assets/images/owner.svg";
@@ -111,8 +132,13 @@ import gallery from "@/assets/images/gallery.svg";
 import blog from "@/assets/images/blog.svg";
 import info from "@/assets/images/info.svg";
 import reserve from "@/assets/images/reserve.svg";
+import menu from "@/assets/images/menu.svg";
 
 export default {
+  components: {
+    MModal,
+    PSalonMenu,
+  },
   data() {
     return {
       logo,
@@ -124,6 +150,7 @@ export default {
       blog,
       info,
       reserve,
+      menu,
       activeLink: "",
       isActive: false,
     };
