@@ -34,7 +34,7 @@
       td.value(v-if="isVisitor") 16,000円
       td.value(v-else) 15,000円
     tr.menu-item
-      td.name ケアエステメニュー
+      td.name ケア・美髪エステメニュー
       td.value(v-if="isVisitor") 3,000円~
       td.value(v-else) 2,500円~
   .text-center
