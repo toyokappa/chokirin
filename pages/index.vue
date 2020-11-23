@@ -1,7 +1,7 @@
 <template lang="pug">
 #wrapper
   g-header
-  // event-button(:event="event")
+  p-virus-button
   section#pageTop.section
     s-pagetop
   section.section
@@ -82,7 +82,7 @@
 <script>
 import GHeader from "@/components/global/Header";
 import GFooter from "@/components/global/Footer";
-import PEventButton from "@/components/parts/EventButton";
+import PVirusButton from "@/components/parts/VirusButton";
 import PSectionHeader from "@/components/parts/SectionHeader";
 import PBlogLinkButton from "@/components/parts/BlogLinkButton";
 import SPagetop from "@/components/sections/Pagetop";
@@ -110,7 +110,7 @@ export default {
   components: {
     GHeader,
     GFooter,
-    PEventButton,
+    PVirusButton,
     PSectionHeader,
     PBlogLinkButton,
     SPagetop,
