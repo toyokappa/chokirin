@@ -21,7 +21,7 @@ export const mutations = {
 }
 
 const parseContent = (text) => {
-  const sections = text.split("\n\n")
+  const sections = text.split(/\n\n+/)
   const contents = sections.map(section => `<p>${section.split("\n").join("</p><p>")}</p>`)
   return `<section>${contents.join("</section><section>")}</section>`
 }
@@ -32,6 +32,12 @@ export const getters = {
   },
   firstMessage(state) {
     return parseContent(state.content.fields.firstMessage)
+  },
+  about(state) {
+    return parseContent(state.content.fields.about)
+  },
+  aboutImage(state) {
+    return state.content.fields.aboutImage.fields.file.url
   },
   profile(state) {
     return parseContent(state.content.fields.profile)

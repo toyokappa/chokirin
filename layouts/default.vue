@@ -43,6 +43,7 @@ a
   font-size: 16px
   letter-spacing: 2px
   line-height: 1.7
+.content, .no-center-content
   section
     margin-bottom: 30px
     p
@@ -51,6 +52,7 @@ a
   .content
     text-align: left
     padding: 0 25px
+  .content, .no-center-content
     p
       margin-bottom: 0
       display: inline
