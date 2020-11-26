@@ -23,7 +23,11 @@
             .catch
               | ダメージケアへのこだわり
             .explain {{ careConcept }}
-  .important ダメージが気になる方必見
+  .recommend
+    .icon
+      img(src="@/assets/images/recommend.svg")
+    .text
+      | ダメージが気になる方必見
   .content(v-html="recommend")
 </template>
 
@@ -52,9 +56,13 @@ export default {
     font-size: 16px
     letter-spacing: 1px
     line-height: 2
-  .important
+  .recommend
     font-size: 20px
     font-weight: bold
     margin-top: 60px
     margin-bottom: 20px
+    .icon
+      margin-bottom: 20px
+      img
+        height: 100px
 </style>
