@@ -32,5 +32,11 @@ export const getters = {
   },
   firstMessage(state) {
     return parseContent(state.content.fields.firstMessage)
-  }
+  },
+  profile(state) {
+    return parseContent(state.content.fields.profile)
+  },
+  lastMessage(state) {
+    return parseContent(state.content.fields.lastMessage)
+  },
 }
