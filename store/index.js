@@ -60,4 +60,7 @@ export const getters = {
   lastMessage(state) {
     return parseContent(state.content.fields.lastMessage)
   },
+  menu(state) {
+    return state.content.fields.menu
+  }
 }

@@ -5,38 +5,10 @@
     li.nav-item(@click="selectVisitor", :class="{ active: isVisitor }") ご新規様
     li.nav-item(@click="selectMember", :class="{ active: !isVisitor }") メンバー様
   table.menu
-    tr.menu-item
-      td.name カット
-      td.value(v-if="isVisitor") 5,000円
-      td.value(v-else) 4,500円
-    tr.menu-item
-      td.name ケアカット
-      td.value(v-if="isVisitor") 8,500円
-      td.value(v-else) 7,500円
-    tr.menu-item
-      td.name 美髪エステカット
-      td.value(v-if="isVisitor") 9,000円
-      td.value(v-else) 8,000円
-    tr.menu-item
-      td.name ケアエステカット
-      td.value(v-if="isVisitor") 12,000円
-      td.value(v-else) 11,000円
-    tr.menu-item
-      td.name カラー
-      td.value(v-if="isVisitor") 6,000円~
-      td.value(v-else) 5,500円~
-    tr.menu-item
-      td.name ストレート
-      td.value(v-if="isVisitor") 15,000円~
-      td.value(v-else) 14,500円~
-    tr.menu-item
-      td.name パーマ
-      td.value(v-if="isVisitor") 16,000円
-      td.value(v-else) 15,000円
-    tr.menu-item
-      td.name ケア・美髪エステメニュー
-      td.value(v-if="isVisitor") 3,000円~
-      td.value(v-else) 2,500円~
+    tr.menu-item(v-for="(item, index) in menu", :key="index")
+      td.name {{ item.name }}
+      td.value(v-if="isVisitor") {{ item.visitor }}
+      td.value(v-else) {{ item.member }}
   .text-center
     .reserve-button.line
       fa.mr-2(:icon="faLine")
@@ -80,6 +52,11 @@ export default {
       this.isVisitor = false;
     },
   },
+  computed: {
+    menu() {
+      return this.$store.getters.menu;
+    },
+  },
 };
 </script>
 
@@ -87,21 +64,15 @@ export default {
 .salon-menu
   background-color: white
   padding: 40px 80px
-  @include media-breakpoint-down(md)
-    padding: 10px 20px
   .title
     font-size: 24px
     font-weight: bold
     text-align: center
+    font-family: $en-accent-family
     margin-bottom: 30px
-    @include media-breakpoint-down(md)
-      font-size: 20px
-      margin-bottom: 20px
   .nav
     justify-content: center
     margin-bottom: 20px
-    @include media-breakpoint-down(md)
-      margin-bottom: 15px
     .nav-item
       font-weight: bold
       transition: 0.3s
@@ -109,8 +80,6 @@ export default {
       border: 2px solid black
       padding: 5px 20px
       margin: 0 20px
-      @include media-breakpoint-down(md)
-        margin: 0 10px
       &:hover, &.active
         color: white
         text-decoration: none
@@ -120,11 +89,9 @@ export default {
     font-weight: bold
     width: 100%
     margin-bottom: 30px
-    @include media-breakpoint-down(md)
-      font-size: 16px
-      margin-bottom: 20px
     .menu-item
       height: 40px
+      text-align: left
       .name
         width: 250px
       .value
@@ -139,8 +106,7 @@ export default {
     margin-bottom: 10px
     transition: 0.3s
     cursor: pointer
-    @include media-breakpoint-down(md)
-      font-size: 14px
+    font-size: 14px
     &.line
       color: #00B900
       border: 2px solid #00B900
@@ -155,4 +121,18 @@ export default {
         color: white
         text-decoration: none
         background-color: black
+@include media-breakpoint-down(md)
+  .salon-menu
+    padding: 10px 20px
+    .title
+      font-size: 20px
+      margin-bottom: 20px
+    .nav
+      margin-bottom: 15px
+      .nav-item
+        margin: 0 10px
+    .menu
+      margin-bottom: 20px
+    .reserve-button
+      font-size: 16px
 </style>
