@@ -3,6 +3,19 @@ div
   nuxt
 </template>
 
+<script>
+export default {
+  async fetch() {
+    const contentRes = await this.$ctfClient.getEntries({
+      content_type: "content",
+      order: "-sys.createdAt",
+      limit: 1,
+    });
+    this.$store.commit("loadContent", contentRes.items[0]);
+  },
+};
+</script>
+
 <style lang="sass">
 html
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif

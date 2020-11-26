@@ -2,6 +2,7 @@ export const state = () => ({
   scrollTop: 0,
   clientWidth: 0,
   isFixed: false,
+  content: {}
 })
 
 export const mutations = {
@@ -14,4 +15,7 @@ export const mutations = {
   fix(state, isFixed) {
     state.isFixed = isFixed
   },
+  loadContent(state, content) {
+    state.content = content
+  }
 }
