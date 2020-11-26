@@ -17,7 +17,7 @@
     s-about
   section.section
     p-section-header#owner(
-      :logo="ownerPhoto",
+      :logo="profileImage",
       logoSize="lg",
       title="北爪 陽",
       subtitle="Kitazume Akira",
@@ -98,7 +98,6 @@ import SStoreInfo from "@/components/sections/StoreInfo";
 import SLastMessage from "@/components/sections/LastMessage";
 
 import aboutLogo from "@/assets/images/logo.jpg";
-import ownerPhoto from "@/assets/images/owner-photo.png";
 import conceptLogo from "@/assets/images/concept.svg";
 import workLogo from "@/assets/images/work.svg";
 import galleryLogo from "@/assets/images/gallery.svg";
@@ -128,7 +127,6 @@ export default {
   data() {
     return {
       aboutLogo,
-      ownerPhoto,
       conceptLogo,
       workLogo,
       galleryLogo,
@@ -217,6 +215,11 @@ export default {
     changeClientWidth() {
       const clientWidth = document.body.clientWidth;
       this.$store.commit("resize", clientWidth);
+    },
+  },
+  computed: {
+    profileImage() {
+      return this.$store.getters.profileImage;
     },
   },
 };

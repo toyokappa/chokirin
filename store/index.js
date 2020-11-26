@@ -42,6 +42,9 @@ export const getters = {
   profile(state) {
     return parseContent(state.content.fields.profile)
   },
+  profileImage(state) {
+    return state.content.fields.profileImage.fields.file.url
+  },
   lastMessage(state) {
     return parseContent(state.content.fields.lastMessage)
   },
