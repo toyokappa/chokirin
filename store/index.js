@@ -45,6 +45,18 @@ export const getters = {
   profileImage(state) {
     return state.content.fields.profileImage.fields.file.url
   },
+  cutConcept(state) {
+    return state.content.fields.cutConcept
+  },
+  colorConcept(state) {
+    return state.content.fields.colorConcept
+  },
+  careConcept(state) {
+    return state.content.fields.careConcept
+  },
+  recommend(state) {
+    return parseContent(state.content.fields.recommend)
+  },
   lastMessage(state) {
     return parseContent(state.content.fields.lastMessage)
   },
