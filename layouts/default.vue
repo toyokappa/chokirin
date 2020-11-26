@@ -37,4 +37,21 @@ a
   &:hover
     text-decoration: none
     opacity: 0.7
+
+.content
+  text-align: center
+  font-size: 16px
+  letter-spacing: 2px
+  line-height: 1.7
+  section
+    margin-bottom: 30px
+    p
+      margin-bottom: 5px
+@media screen and (max-width: 480px)
+  .content
+    text-align: left
+    padding: 0 25px
+    p
+      margin-bottom: 0
+      display: inline
 </style>

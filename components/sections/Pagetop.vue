@@ -4,17 +4,16 @@
 </template>
 
 <script>
-import topImage from "@/assets/images/pagetop.jpg";
 import GHeader from "@/components/global/Header";
 
 export default {
   components: {
     GHeader,
   },
-  data() {
-    return {
-      topImage,
-    };
+  computed: {
+    topImage() {
+      return this.$store.getters.topImage;
+    },
   },
 };
 </script>

@@ -19,3 +19,18 @@ export const mutations = {
     state.content = content
   }
 }
+
+const parseContent = (text) => {
+  const sections = text.split("\n\n")
+  const contents = sections.map(section => `<p>${section.split("\n").join("</p><p>")}</p>`)
+  return `<section>${contents.join("</section><section>")}</section>`
+}
+
+export const getters = {
+  topImage(state) {
+    return state.content.fields.heroImage.fields.file.url
+  },
+  firstMessage(state) {
+    return parseContent(state.content.fields.firstMessage)
+  }
+}
