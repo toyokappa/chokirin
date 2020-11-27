@@ -27,7 +27,9 @@
     .icon
       img(src="@/assets/images/recommend.svg")
     .text
-      | ダメージが気になる方必見
+      div ダメージが気になる方必見
+      div 【ケア・美髪エステメニュー】
+      div オススメ致します！
   .content(v-html="recommend")
 </template>
 
@@ -65,4 +67,7 @@ export default {
       margin-bottom: 20px
       img
         height: 100px
+    .text
+      div
+        margin-bottom: 5px
 </style>
