@@ -1,0 +1,54 @@
+on: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@2.0.0
+executors:
+  build:
+    docker:
+      - image: cimg/node:12.18
+  deploy:
+    docker:
+      - image: cimg/python:3.7-node
+
+commands:
+  yarn_install:
+    steps:
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+
+jobs:
+  build:
+    executor: build
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - yarn_install
+
+  deploy:
+    executor: deploy
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - yarn_install
+      - run:
+          name: generate
+          command: yarn generate
+      - aws-s3/sync:
+          from: dist
+          to: s3://chokirin
+
+workflows:
+  version: 2
+  continuous-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
