@@ -86,7 +86,11 @@ export default {
     );
     const map = new this.$google.maps.Map(this.$refs.map, {
       center: latlng,
-      zoom: 13,
+      zoom: 14,
+      mapTypeControl: false,
+      fullscreenControl: false,
+      streetViewControl: false,
+      zoomControl: false,
     });
     new this.$google.maps.Marker({
       position: latlng,
@@ -108,6 +112,8 @@ export default {
     background-size: cover
     background-position: center center
     margin-bottom: 30px
+    @include media-breakpoint-down(md)
+      padding-bottom: 75%
   .info
     margin-bottom: 30px
     .label

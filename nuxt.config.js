@@ -53,6 +53,7 @@ export default {
   env: {
     ctfSpaceId: process.env.CTF_SPACE_ID,
     ctfCdaAccessToken: process.env.CTF_CDA_ACCESS_TOKEN,
+    googleApiKey: process.env.GOOGLE_API_KEY,
     domain,
     pageLimit,
   },
