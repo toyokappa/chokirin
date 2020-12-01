@@ -1,7 +1,7 @@
 <template lang="pug">
 .reserve--button
   .reserve-link(@click="$refs.modal.openModal()")
-    strong ご予約はコチラ
+    strong ご予約・お問い合わせはコチラ
     fa.ml-2(:icon="faAngleDoubleRight")
   m-modal(ref="modal")
     p-salon-menu
