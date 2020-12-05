@@ -43,6 +43,7 @@ jobs:
       - aws-s3/sync:
           from: dist
           to: s3://chokirin
+          arguments: "--delete"
       - run:
           name: clear cache from cloudfornt
           command: aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_ID --paths '/*'
