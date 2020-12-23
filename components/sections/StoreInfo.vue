@@ -13,23 +13,26 @@
           .item
             .unit 〒371-0013
             a.value(href="https://goo.gl/maps/7Fw1MaHFiRv4dzG9A", target="new") 群馬県前橋市片貝町4丁目17-24-17-2 オペラハウス101
+          .excuse 住所をクリックでGoogleMapが表示されます
         .info
           .label
             fa.mr-2(:icon="faPhoneAlt")
             span 電話番号
           .item
             a.value(href="tel:0278966287") 0278-96-6287
-      .col-lg-5.col-sm-6
         .info
           .label
             fa.mr-2(:icon="faClock")
             span 営業時間
           .item
             span.mr-2 平日
-            span.value 9:00 ~ 20:00
+            span.value.mr-2 9:00 ~ 20:00
+            span.excuse カット最終受付 18:30
           .item
             span.mr-2 休日
-            span.value 9:00 ~ 19:00
+            span.value.mr-2 9:00 ~ 19:00
+            span.excuse カット最終受付 17:30
+      .col-lg-5.col-sm-6
         .info
           .label
             fa.mr-2(:icon="faBed")
@@ -41,9 +44,13 @@
             div LINEでのご予約やお問い合わせをおすすめします。
         .info.mb-0
           .label
-            fa.mr-2(:icon="faSubway")
-            span 最寄り駅
+            fa.mr-2(:icon="faHome")
+            span アクセス
           .item
+            span.unit.mr-2 駐車場
+            span.value あり
+          .item
+            span.unit.mr-2 最寄り駅
             span.value 前橋駅
             span.unit もしくは
             span.value 前橋大島駅
@@ -60,7 +67,7 @@ import {
   faPhoneAlt,
   faClock,
   faBed,
-  faSubway,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 import pReserveButton from "@/components/parts/ReserveButton";
 import mapIcon from "@/assets/images/map-icon.png";
@@ -76,7 +83,7 @@ export default {
       faPhoneAlt,
       faClock,
       faBed,
-      faSubway,
+      faHome,
     };
   },
   mounted() {
