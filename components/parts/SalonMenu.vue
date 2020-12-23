@@ -9,38 +9,26 @@
       td.name {{ item.name }}
       td.value(v-if="isVisitor") {{ item.visitor }}
       td.value(v-else) {{ item.member }}
-  .text-center
-    .reserve-button.line
-      fa.mr-2(:icon="faLine")
-      span.text LINEでの予約はコチラ
-      fa.ml-2(:icon="faAngleDoubleRight")
-  .text-center
-    .reserve-button.web
-      fa.mr-2(:icon="faGlobe")
-      span.text Webでの予約はコチラ
-      fa.ml-2(:icon="faAngleDoubleRight")
-  .text-center
-    .reserve-button.tel
-      fa.mr-2(:icon="faPhoneAlt")
-      span.text 電話での予約はコチラ
-      fa.ml-2(:icon="faAngleDoubleRight")
+  .reserve-title ご予約・お問い合わせ
+  .reserve-area
+    a.reserve-button.line(href="https://line.me/ti/p/aQ2Wqwq6so", target="new")
+      img(src="@/assets/images/line.svg")
+    a.reserve-button.web(
+      href="https://beauty.hotpepper.jp/slnH000518332/",
+      target="new"
+    )
+      img(src="@/assets/images/hpb.svg")
+    a.reserve-button.tel(href="tel:0278966287", target="new")
+      fa(:icon="faPhoneAlt")
 </template>
 
 <script>
-import {
-  faGlobe,
-  faPhoneAlt,
-  faAngleDoubleRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { faLine } from "@fortawesome/free-brands-svg-icons";
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default {
   data() {
     return {
-      faGlobe,
       faPhoneAlt,
-      faAngleDoubleRight,
-      faLine,
       isVisitor: true,
     };
   },
@@ -63,7 +51,7 @@ export default {
 <style lang="sass" scoped>
 .salon-menu
   background-color: white
-  padding: 40px 80px
+  padding: 30px 60px
   .title
     font-size: 24px
     font-weight: bold
@@ -88,7 +76,7 @@ export default {
     font-size: 18px
     font-weight: bold
     width: 100%
-    margin-bottom: 30px
+    margin-bottom: 40px
     .menu-item
       height: 40px
       text-align: left
@@ -96,34 +84,49 @@ export default {
         width: 250px
       .value
         width: 95px
-  .reserve-button
-    display: inline-block
-    font-size: 16px
+  .reserve-title
+    font-size: 24px
     font-weight: bold
-    font-family: $en-accent-family
-    background-color: white
-    padding: 5px 10px
-    margin-bottom: 10px
-    transition: 0.3s
-    cursor: pointer
-    font-size: 14px
-    &.line
-      color: #00B900
-      border: 2px solid #00B900
-      &:hover
-        color: white
-        text-decoration: none
-        background-color: #00B900
-    &.web, &.tel
-      color: black
-      border: 2px solid black
-      &:hover
-        color: white
-        text-decoration: none
-        background-color: black
+    text-align: center
+    margin-bottom: 15px
+  .reserve-area
+    display: flex
+    justify-content: center
+    .reserve-button
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 50px
+      height: 50px
+      background-color: white
+      border-radius: 50%
+      margin: 10px
+      transition: 0.3s
+      cursor: pointer
+      img
+        width: 30px
+      &.line
+        color: #00B900
+        border: 2px solid #00B900
+        &:hover
+          text-decoration: none
+          background-color: #00B900
+      &.web
+        border: 2px solid #ae2f5b
+        &:hover
+          text-decoration: none
+          background-color: #ae2f5b
+      &.tel
+        font-size: 24px
+        color: black
+        border: 2px solid black
+        &:hover
+          color: white
+          text-decoration: none
+          background-color: black
 @include media-breakpoint-down(md)
   .salon-menu
-    padding: 10px 20px
+    padding: 20px
     .title
       font-size: 20px
       margin-bottom: 20px
@@ -132,7 +135,7 @@ export default {
       .nav-item
         margin: 0 10px
     .menu
-      margin-bottom: 20px
+      margin-bottom: 30px
     .reserve-button
       font-size: 16px
 </style>
