@@ -48,7 +48,7 @@
             span アクセス
           .item
             span.unit.mr-2 駐車場
-            span.value あり
+            span.value 店舗前4台
           .item
             span.unit.mr-2 最寄り駅
             span.value 前橋駅
