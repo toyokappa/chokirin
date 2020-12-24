@@ -36,7 +36,7 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
           n-link.nav-link(v-scroll-to="'#work'", to)
             .icon
               img(v-lazy="work")
-            .text WORK
+            .text CATALOG
         li.nav-item
           n-link.nav-link(v-scroll-to="'#gallery'", to)
             .icon
@@ -86,7 +86,7 @@ header.navbar.navbar-expand-lg.header-nav.fixed-top(
         n-link.nav-link(v-scroll-to="'#work'", to)
           span.icon
             img(v-lazy="work")
-          span.text WORK
+          span.text CATALOG
       li.nav-item
         n-link.nav-link(v-scroll-to="'#gallery'", to)
           span.icon

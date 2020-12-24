@@ -35,9 +35,9 @@
   section.section
     p-section-header#work(
       :logo="workLogo",
-      title="お客様の声",
-      subtitle="Photo And Message",
-      description="実績とお客様の声を添えて"
+      title="カタログ",
+      subtitle="Style Sample",
+      description="施術の内容をお披露目"
     )
     s-work(:posts="workPosts")
   section.section
@@ -139,7 +139,7 @@ export default {
     const workRes = await app.$ctfClient.getEntries({
       content_type: "work",
       order: "-sys.createdAt",
-      limit: 12,
+      limit: 8,
     });
     const workPosts = workRes.items;
 
