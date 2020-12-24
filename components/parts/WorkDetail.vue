@@ -1,8 +1,12 @@
 <template lang="pug">
 .work-detail
   .d-flex
-    .work-photo(v-lazy:background-image="post.fields.before.fields.file.url")
-    .work-photo(v-lazy:background-image="post.fields.after.fields.file.url")
+    .work-photo
+      .label Before
+      .photo(v-lazy:background-image="post.fields.before.fields.file.url")
+    .work-photo
+      .label After
+      .photo(v-lazy:background-image="post.fields.after.fields.file.url")
   .work-content
     .work-title {{ post.fields.title }}
     .work-description(v-html="parseDescription(post.fields.description)")
@@ -27,10 +31,18 @@ export default {
   width: 100%
   max-width: 600px
   .work-photo
-    width: 50%
-    background-size: cover
-    background-position: center center
-    padding-bottom: 50%
+    width: 100%
+    background-color: white
+    .label
+      font-size: 16px
+      font-weight: bold
+      text-align: center
+      padding: 5px 0
+    .photo
+      width: 100%
+      background-size: cover
+      background-position: center center
+      padding-bottom: 100%
   .work-content
     width: 100%
     background-color: white
