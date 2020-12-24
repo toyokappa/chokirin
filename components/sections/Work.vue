@@ -7,7 +7,7 @@
         :key="post.sys.id"
       )
         .photo(
-          v-lazy:background-image="post.fields.photo.fields.file.url",
+          v-lazy:background-image="post.fields.after.fields.file.url",
           @click="openModal(post)"
         )
       .photo-area.col-sm-3.col-4.mb-3(v-for="n in 8 - posts.length", :key="n")

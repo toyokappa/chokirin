@@ -1,14 +1,11 @@
 <template lang="pug">
 .work-detail
   .d-flex
-    .work-photo(v-lazy:background-image="post.fields.photo.fields.file.url")
-    .work-photo(v-lazy:background-image="post.fields.photo.fields.file.url")
+    .work-photo(v-lazy:background-image="post.fields.before.fields.file.url")
+    .work-photo(v-lazy:background-image="post.fields.after.fields.file.url")
   .work-content
-    .work-title xxxカット
-    .work-description
-      p xxxxにこだわり、xxxを表現しました。
-      p xxxxにこだわり、xxxを表現しました。
-      p xxxxにこだわり、xxxを表現しました。
+    .work-title {{ post.fields.title }}
+    .work-description(v-html="parseDescription(post.fields.description)")
 </template>
 
 <script>
