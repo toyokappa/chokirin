@@ -88,9 +88,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    ['@nuxtjs/google-analytics', {
-      id: 'G-PVQ89HHVPV'
-    }]
+    '@nuxtjs/google-analytics',
   ],
   /*
   ** Nuxt.js modules
@@ -158,4 +156,7 @@ export default {
   fontawesome: {
     component: 'fa'
   },
+  googleAnalytics: {
+    id: 'G-B0T6F6326Q',
+  }
 }
