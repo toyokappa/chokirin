@@ -3,7 +3,8 @@
   .page-top(v-lazy:background-image="topImage")
     .title-area
       .title 美容室chokirin
-      .subtitle クセ毛・ダメージのお悩みを解決
+      .subtitle クセ毛・ダメージお悩みを解決に
+      .subtitle 《１日４名様限定》
 </template>
 
 <script>

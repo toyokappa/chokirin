@@ -27,9 +27,9 @@
     .icon
       img(src="@/assets/images/recommend.svg")
     .text
-      div ダメージが気になる方必見
-      div 【ケア・美髪エステメニュー】
-      div オススメ致します！
+      div ダメージが気になる方おすすめ
+      div 《chokirinオリジナル美髪エステ》
+      div 《ケアカット》
   .content(v-html="recommend")
 </template>
 
