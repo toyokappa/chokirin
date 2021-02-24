@@ -88,7 +88,6 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/google-analytics',
   ],
   /*
   ** Nuxt.js modules
@@ -99,6 +98,7 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    '@nuxtjs/google-gtag',
     ['vue-scrollto/nuxt', { duration: 500, offset: -50 }],
     'nuxt-compress',
     'nuxt-fontawesome',
@@ -156,7 +156,8 @@ export default {
   fontawesome: {
     component: 'fa'
   },
-  googleAnalytics: {
+  'google-gtag': {
     id: 'G-B0T6F6326Q',
+    debug: true
   }
 }
