@@ -12,7 +12,7 @@
             span 住所
           .item
             .unit 〒371-0013
-            a.value(href="https://goo.gl/maps/7Fw1MaHFiRv4dzG9A", target="new") 群馬県前橋市片貝町4丁目17-24-17-2 オペラハウス101
+            a.value(href="https://goo.gl/maps/7Fw1MaHFiRv4dzG9A", target="new") 群馬県前橋市片貝町4丁目17-2 オペラハウス101
           .excuse 住所をクリックでGoogleMapが表示されます
         .info
           .label
